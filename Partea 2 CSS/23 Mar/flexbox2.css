@@ -1,0 +1,19 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+ 
+[class*="demo-item-"] {
+    padding: 20px;
+    background-color: #FFBF9B;
+    border: 5px solid #B46060;
+    /* border-radius: 5px; */
+    color: #FFFFFF;
+    font-weight: bold;
+}
+ 
+.demo-container {
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+}

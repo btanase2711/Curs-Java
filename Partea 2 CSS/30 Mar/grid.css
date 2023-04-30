@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+}
+.Skills-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-gap: 10px; */
+}
+.Skills{
+    border: 1px solid black
+}
+
+img{
+    width: 100%
+}
+@media screen and (max-width: 600px) {
+    .Skills-container {
+        grid-template-columns: 1fr;
+        background-color: blueviolet ;
+    }
+    
+}

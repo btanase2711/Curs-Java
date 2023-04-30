@@ -1,0 +1,9 @@
+.body{
+    margin: 0;
+}
+.Skills{
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}

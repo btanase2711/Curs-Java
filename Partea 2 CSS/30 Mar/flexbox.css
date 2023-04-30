@@ -1,0 +1,19 @@
+.body{
+    margin: 0;
+}
+.Skills-container{
+    display: flex;
+}
+
+.Skills{
+    flex-grow: 2;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 600px) {
+    .Skills-container {
+        flex-direction: column;
+        background-color: violet;
+    }
+    
+}
