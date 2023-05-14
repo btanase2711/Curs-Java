@@ -493,37 +493,29 @@ body > section:last-child {
     margin: auto;
     background: #02897A;
     border-radius: 32px;
-    display: flex;
 }
 
-.chenar-get-this > p {
-    position: absolute;
-    width: 510px;
-    height: 92px;
-    margin-left: 51px;
-    margin-top: 49px;
-    font-family: 'Poppins';
+.chenar-get-this-text {
+    width: 450px;
+    height: 155px;
+    margin-left: 25px;
+    margin-top: 40px;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
-    line-height: 151.4%;
     color: #FFFFFF;
 }
 
-.chenar-get-this > img {
-    position: absolute;
+.chenar-get-this-poza {
     width: 371px;
     height: 351px;
-    margin-left: 590px;
-    margin-top: 4px;
+    justify-content: flex-start;
 }
 
-.chenar-get-this > button {
-    position: absolute;
+.chenar-get-this-text-button {
     width: 150px;
     height: 50px;
-    margin-left: 51px;
-    margin-top: 239px;
+    margin-left: 25px;
 }
 
 /* de ce in Figma apare cam al orice element position: absolute si left si top fara "margin" in fata? */
@@ -670,24 +662,18 @@ body > section:last-child {
     }
 
     .chenar-get-this {
-        display: flex;
+        width: auto;
+        height: auto;
         flex-direction: column;
         align-items: flex-start;
-
     }
-    
-    .chenar-get-this > p {
+
+    .chenar-get-this-poza {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
  
-    }
-    
-    .chenar-get-this > img {
-   
-    }
-    
-    .chenar-get-this > button {
-
-
-
 }
 
 @media screen and (max-width: 850px) {
@@ -811,6 +797,37 @@ body > section:last-child {
         flex-direction: column;
         justify-content: flex-start;
         align-items:flex-start;
+    }
+
+    .chenar-get-this {
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chenar-get-this-text {
+        width: auto;
+        height: auto;
+        margin-left: 25px;
+        margin-top: 40px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        color: #FFFFFF;
+    }
+    .chenar-get-this-poza {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .footer-container {
+        display:flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
     }
 
 
