@@ -1,14 +1,14 @@
 const button = document.getElementById("button");
-const jokeDiv = document.getElementById("jokeDiv");
+const adviceDiv = document.getElementById("adviceDiv");
 
-function renderJoke(joke) {
-  jokeDiv.textContent = joke;
+function renderAdvice(advice) {
+  adviceDiv.textContent = advice;
 }
 
-function voicedJoke(joke) {
+function voicedAdvice(advice) {
   VoiceRSS.speech({
     key: "5ff4b1b6ab8143f488a977bc3a2f2a9c",
-    src: joke,
+    src: advice,
     hl: "en-us",
     v: "Linda",
     r: 0,
@@ -18,24 +18,26 @@ function voicedJoke(joke) {
   });
 }
 
-async function getJoke() {
+async function getAdvice() {
   const url =
-    "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
-  let joke = "";
+    "https://api.adviceslip.com/advice";
+  let advice = "";
 
   try {
     const response = await fetch(url);
     const data = await response.json();
 
-    if (data.setup) {
-      joke = `${data.setup} ... ${data.delivery}`;
+    console.log (data)
+
+    if (data.slip.advice) {
+      advice = `${data.slip.advice}`;
     } else {
-      joke = data.joke;
+      advice = data.slip.advice;
     }
   } catch (e) {}
 
-  renderJoke(joke);
-  voicedJoke(joke);
+  renderAdvice(advice);
+  voicedAdvice(advice);
 }
 
-button.addEventListener("click", getJoke);
+button.addEventListener("click", getAdvice);

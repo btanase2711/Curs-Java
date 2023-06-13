@@ -1,10 +1,10 @@
 body {
   min-height: 100vh;
-  background-color: #45badd;
+  background-color: #202632;
 }
 
 .container {
-  background: url("./robot.gif");
+  background-color: #202632;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -18,22 +18,34 @@ body {
   height: 100%;
 }
 
+.line {
+  background-image: url(Line.png);
+  background-position: center;
+  color: beige;
+}
+
 button {
-  width: 200px;
-  background: #ff3282;
+  background: #53FFAB;
+  background-image: url(favicon.png);
+  background-position: center;
+  background-size: calc(45%);
+  background-repeat: no-repeat;
   cursor: pointer;
-  color: white;
   border: none;
-  height: 50px;
-  font-size: 18px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+  width: 65px;
+  height: 65px;
+  margin-top: -50px;
+  border-radius: 50%;
 }
 
 .voice {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #313A49;
+  width: 440px;
+  height: 235px;
+  left: 450px;
+  top: 222px;
   padding: 30px;
   font-size: 18px;
-  border-radius: 10px;
+  border-radius: 20px;
   margin: 20px 0;
 }
