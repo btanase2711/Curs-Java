@@ -1,8 +1,13 @@
 const button = document.getElementById("button");
 const adviceDiv = document.getElementById("adviceDiv");
+const adviceNu = document.getElementById("adviceNu");
 
 function renderAdvice(advice) {
   adviceDiv.textContent = advice;
+}
+
+function renderId(id) {
+  adviceNu.textContent = id;
 }
 
 function voicedAdvice(advice) {
@@ -22,6 +27,7 @@ async function getAdvice() {
   const url =
     "https://api.adviceslip.com/advice";
   let advice = "";
+  let id = "";
 
   try {
     const response = await fetch(url);
@@ -29,13 +35,16 @@ async function getAdvice() {
 
     console.log (data)
 
-    if (data.slip.advice) {
-      advice = `${data.slip.advice}`;
+    if (data.slip && data.slip.advice) {
+      advice = `"${data.slip.advice}"`;
+      id = `ADVICE # ${data.slip.id}`
     } else {
       advice = data.slip.advice;
+      id = data.slip.id;
     }
   } catch (e) {}
 
+  renderId(id);
   renderAdvice(advice);
   voicedAdvice(advice);
 }
