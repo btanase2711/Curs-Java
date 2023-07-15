@@ -1,22 +1,23 @@
 import "./TaskCard.css";
+import Badge from "../badge/Badge";
+import DateContainer from "../date-container/DateContainer";
 
-function TaskCard() {
+// de ce am scos badge in afara taskcard si am facut-o componenta separata?
+
+// Cum functioneaza cu props fara a fi declarate constatele in functia taskcard, ci declarate in fucntia App?
+
+function TaskCard(props) {
   return (
     <div className="card-wrapper">
       <div className="card-header">
-        <p className="task-id">T-1</p>
-        <div className="badge">
-          <p>Todo</p>
-        </div>
+        <p className="task-id">{props.id}</p>
+        <Badge status={props.status} />
       </div>
       <div className="card-content">
-        <p>Create a system design</p>
+        <p>{props.name}</p>
       </div>
       <div className="card-footer">
-        <div>
-          <p>Due Date</p>
-          <p>24/04/2024</p>
-        </div>
+        <DateContainer date={props.dueDate} />
       </div>
     </div>
   );
