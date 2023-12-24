@@ -8,23 +8,79 @@ console.log(valoare());
 
 //2.Creează o funcție care are o variabila definita local ‘numeleMeu’ și returnează numărul ei de caractere
 
+const numarCaractere = () => {
+  const numeleMeu = "Bogdanovici";
+  return numeleMeu.length;
+};
+console.log(numarCaractere());
+
 //3.Creează o funcție care are 2 variabile definite local a și b și returnează suma lor
 
+const sumaNumerelor = () => {
+  const a = 6;
+  const b = 6;
+  return a + b;
+};
+
+console.log(sumaNumerelor());
+
 //4.Sa se creeze o functie care primeste trei parametrii ( d, e și f ) si returneaza produsul lor
+
+const produsulNumerelor = (d, e, f) => {
+  return d * e * f;
+};
+
+console.log(produsulNumerelor(3, 4, 5));
 
 //5.Sa se creeze o functie care primeste un parametru ( x ) si returneaza diferența lui cu 10.
 //De exemplu dacă x = 16, funcția sa returneze 6
 
+const difernetaX = (x) => {
+  return x - 10;
+};
+
+console.log(difernetaX(8));
+
 //6.Sa se creeze o functie care primeste un parametru ( a ) si returneaza opusul lui.
 //De exemplu dacă a este 7 funcția sa returneze -7.
 
+const opusul = (a) => {
+  return -1 * a;
+};
+console.log(opusul(145));
+
 //7.Sa se creeze o functie care primeste doi parametrii ( x si y ) si returneaza impartirea lor
+
+const impartire = (x, y) => {
+  return x / y;
+};
+console.log(impartire(15, 5));
 
 //8.Sa se creeze o functie care primeste un parametru ( notaMea ) si returneaza “Promovat” dacă
 //valoarea parametrului este peste 5 ( inclusiv ), în caz contrar returnează “Picat”
 
+const verificarePromovare = (notaMea) => {
+  let status;
+  if (notaMea >= 5) {
+    status = "Promovat";
+  } else {
+    status = "Picat";
+  }
+  return status;
+};
+
+console.log(verificarePromovare(5));
+
 //9.Sa se creeze o funcție care primeste doi parametrii ( a si b ) și
-// diferența lor ( a - b ) este mai mare decât 10, atunci sa returneze true, altfel false.
+// daca diferența lor ( a - b ) este mai mare decât 10, atunci sa returneze true, altfel false.
+
+const statusDiferenta = (a, b) => {
+  let status;
+  status = a - b > 10 ? "true" : "false";
+  return status;
+};
+
+console.log(statusDiferenta(10, 9));
 
 //10.Sa se creeze o funcție care primeste doi parametrii ( a si b ) și
 //dacă cele doua numere sunt egale sa se returneze true, altfel false.
