@@ -53,11 +53,68 @@ console.log(aparitiiZero([4, 5, 7, 0, 3, 0, 78, 0]));
 
 /* Creează o funcție care primește ca param un array de numere și returneaza suma numerelor pozitive */
 
+const sumaNumerelorPozitive = (numere) => {
+  let suma = 0;
+  for (i = 0; i < numere.length; i++) {
+    if (numere[i] > 0) {
+      suma = suma + numere[i];
+    }
+  }
+  return suma;
+};
+
+console.log(sumaNumerelorPozitive([1, 2, 3, -5, -2, 6, -2, 1]));
+
 /* Creează o funcție care primește ca param un array de numere și returneaza produsul numerelor impare */
+
+const produsulNumerelorImpare = (numere) => {
+  let produsul = 1;
+  /*   let count = 0 */
+  for (i = 0; i < numere.length; i++) {
+    if (numere[i] % 2 > 0) {
+      produsul *= numere[i];
+      /*       count +=1
+      if (count===0) {
+        return "Nu exista numere impare"
+      } */
+    }
+  }
+  return produsul;
+};
+
+console.log(produsulNumerelorImpare([2, 4, 6, 8, 10, 7]));
+
+// cum fac sa nu afiseze 1 daca nu exista numere impare in array?
 
 /* Creează o funcție care primește ca param un array de numere și returneaza cel mai mare număr din array */
 
+const celMaiMareNumar = (numere) => {
+  let max = numere[0];
+  for (i = 0; i < numere.length; i++) {
+    if (max < numere[i]) {
+      max = numere[i];
+    }
+  }
+  return max;
+};
+
+console.log(celMaiMareNumar([1, 2, 3, 5, 7]));
+
 /* Creează o funcție care primește ca param un array de numere și returneaza cel mai mare număr par din array */
+
+const celMaiMareNumarPar = (numere) => {
+  let maxPar = numere[0];
+  for (i = 0; i < numere.length; i++) {
+    if (maxPar < numere[i] && numere[i] % 2 === 0) {
+      maxPar = numere[i];
+    }
+  }
+  return maxPar;
+};
+
+console.log(celMaiMareNumarPar([33, 5, 4, 36, 9, 12]));
+
+// ceva nu merge bine la functia asta, daca primul numar din array este cel mai mare si impar il returneaza pe ala
 
 /* Creează o funcție care primește ca param un array de elemente ( diverse tipuri ) și returnează câte 
 elemente sunt numere. De exemplu: pentru array-ul [5, ‘Mihai’, true, false, undefined, 10, 9, ‘Hey’] 
