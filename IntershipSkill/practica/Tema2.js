@@ -103,29 +103,56 @@ console.log(celMaiMareNumar([1, 2, 3, 5, 7]));
 /* Creează o funcție care primește ca param un array de numere și returneaza cel mai mare număr par din array */
 
 const celMaiMareNumarPar = (numere) => {
-  let maxPar = numere[0];
+  let maxPar;
   for (i = 0; i < numere.length; i++) {
-    if (maxPar < numere[i] && numere[i] % 2 === 0) {
+    if (maxPar === undefined && numere[i] % 2 === 0) {
+      maxPar = numere[i];
+    } else if (maxPar < numere[i] && numere[i] % 2 === 0) {
       maxPar = numere[i];
     }
   }
   return maxPar;
 };
 
-console.log(celMaiMareNumarPar([33, 5, 4, 36, 9, 12]));
-
-// ceva nu merge bine la functia asta, daca primul numar din array este cel mai mare si impar il returneaza pe ala
+console.log(celMaiMareNumarPar([37, 5, 4, 36, 9, 12]));
 
 /* Creează o funcție care primește ca param un array de elemente ( diverse tipuri ) și returnează câte 
 elemente sunt numere. De exemplu: pentru array-ul [5, ‘Mihai’, true, false, undefined, 10, 9, ‘Hey’] 
 sa returneze 3. ( aici probabil te gândești la ceva ce ți am arătat la ultima ședința, însă te încurajez 
 sa cauti logic cât mai multe metode ) */
 
+const cateElementeSuntNumere = (elemente) => {
+  let count = 0;
+  for (i = 0; i < elemente.length; i++) {
+    if (elemente[i] % 2 > 0) {
+      count += 1;
+    }
+  }
+  return count;
+};
+
+console.log(
+  cateElementeSuntNumere([
+    5,
+    7,
+    "Spanac",
+    "Mihai",
+    true,
+    false,
+    undefined,
+    10,
+    9,
+    "Hey",
+  ])
+);
+
+// de verificat ce solutie ai aratat la ultima sedinta
+
 /* Creează o funcție care primește ca param o lista de produse din coșul de cumparaturi 
 și returneaza totalul cosului. Fiecare produs reprezintă un obiect cu o structura fixa. 
 Exemplu: pentru lista de produse de mai jos sa se returneze 298 */
 
-/* [
+let cos = [
   {
     nume: "Gel de dus",
     pret: 29,
@@ -151,4 +178,16 @@ Exemplu: pentru lista de produse de mai jos sa se returneze 298 */
     pret: 5,
     canitate: 10,
   },
- ];*/
+];
+
+console.log(cos[4].nume);
+
+const totalSumaCos = (cos) => {
+  let sumaCos = 0;
+  for (i = 0; i < cos.length; i++) {
+    sumaCos += cos[i].pret * cos[i].canitate;
+  }
+  return sumaCos;
+};
+
+console.log(totalSumaCos(cos));
