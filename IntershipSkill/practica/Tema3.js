@@ -21,11 +21,16 @@ const firstP = document.querySelector(".the-real-first-paragraph");
 
 firstP.textContent = "(" + firstP.textContent.length + ")" + firstP.textContent;
 
-/*4.Primul item din lista sa fie afișat pe background roșu
+/*4.Primul item din lista sa fie afișat pe background roșu*/
 
+const firstItemList = document.querySelector(".first-list-item");
 
-5.Toate item-urile din lista care conțin numere pare ( 2, 4 ) sa fie afișate pe un background gri deschis - rgba(0, 0, 0, 0.2), textul sa aibă culoarea rgba(0, 0, 0, 0.8), iar font-weight 700
-6.Folosindu-te de replace înlocuiește textul din ultimul item în “Last item 5”
+firstItemList.style.backgroundColor = "red";
+
+/*5.Toate item-urile din lista care conțin numere pare ( 2, 4 ) sa fie afișate pe un 
+background gri deschis - rgba(0, 0, 0, 0.2), textul sa aibă culoarea rgba(0, 0, 0, 0.8), iar font-weight 700*/
+
+/*6.Folosindu-te de replace înlocuiește textul din ultimul item în “Last item 5”
 <body>
     <h1> Hello </h1>
     <h1> Hello </h1>
