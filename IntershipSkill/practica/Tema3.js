@@ -30,6 +30,12 @@ firstItemList.style.backgroundColor = "red";
 /*5.Toate item-urile din lista care conțin numere pare ( 2, 4 ) sa fie afișate pe un 
 background gri deschis - rgba(0, 0, 0, 0.2), textul sa aibă culoarea rgba(0, 0, 0, 0.8), iar font-weight 700*/
 
+const evenListItem = document.querySelectorAll(".even-item");
+
+evenListItem.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+evenListItem.style.color = "rgba(222, 0, 0, 0.8)";
+evenListItem.style.fontWeight = "1000";
+
 /*6.Folosindu-te de replace înlocuiește textul din ultimul item în “Last item 5”
 <body>
     <h1> Hello </h1>
