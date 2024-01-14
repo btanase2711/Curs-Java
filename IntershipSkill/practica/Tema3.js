@@ -32,28 +32,15 @@ background gri deschis - rgba(0, 0, 0, 0.2), textul sa aibă culoarea rgba(0, 0,
 
 const evenListItem = document.querySelectorAll(".even-item");
 
-evenListItem.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
-evenListItem.style.color = "rgba(222, 0, 0, 0.8)";
-evenListItem.style.fontWeight = "1000";
+for (i = 0; i < evenListItem.length; i++) {
+  evenListItem[i].style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+  evenListItem[i].style.color = "rgba(222, 0, 0, 0.8)";
+  evenListItem[i].style.fontWeight = "600";
+}
 
-/*6.Folosindu-te de replace înlocuiește textul din ultimul item în “Last item 5”
-<body>
-    <h1> Hello </h1>
-    <h1> Hello </h1>
+/*6.Folosindu-te de replace înlocuiește textul din ultimul item în “Last item 5”*/
 
-    <div>
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, voluptates sunt fuga debitis minus perferendis ratione id voluptate vel ipsa. </p>
-    </div>
+const lastItem = document.querySelector(".last-item");
 
-    <h3> My list: </h3>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-    </ul>
-
-
-    <script src="./script.js"></script>
-</body> */
+// lastItem.textContent = "Last Item 5";
+lastItem.textContent = lastItem.replace("Last Item 5");
