@@ -42,5 +42,8 @@ for (i = 0; i < evenListItem.length; i++) {
 
 const lastItem = document.querySelector(".last-item");
 
-// lastItem.textContent = "Last Item 5";
-lastItem.textContent = lastItem.replace("Last Item 5");
+/* let lastItemText = lastItem.textContent;
+
+lastItemText.replace("Item 5", "Last Item 5");
+lastItem.textContent = lastItemText.replace("Item 5", "Last Item 5"); */
+lastItem.textContent = lastItem.textContent.replace("Item 5", "Last Item 5");
